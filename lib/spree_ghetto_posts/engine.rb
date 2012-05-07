@@ -1,6 +1,6 @@
 module SpreePosts
   class Engine < Rails::Engine
-    engine_name 'spree_posts'
+    engine_name 'spree_ghetto_posts'
 
     config.autoload_paths += %W(#{config.root}/lib)
 
