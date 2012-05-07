@@ -3,6 +3,8 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_ghetto_posts'
   s.version     = '0.1.0'
+  s.summary     = 'Add blog function to your spree site'
+  s.description = 'You get an easy post management tool with this gem'
   s.summary     = 'TODO: Add gem summary here'
   s.description = 'TODO: Add (optional) gem description here'
   s.required_ruby_version = '>= 1.8.7'
