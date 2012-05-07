@@ -1,0 +1,47 @@
+<div class="clearfix">
+  <div class="left">
+    <%= f.field_container :title do %>
+      <%= f.label :title %> <span class="required">*</span><br />
+      <%= f.text_field :title, :class => 'fullwidth title' %>
+      <%= f.error_message_on :title %>
+    <% end %>
+
+    <%= f.field_container :slug do %>
+      <%= f.label :slug %> <span class="required">*</span><br />
+      <%= f.text_field :slug, :class => 'fullwidth title' %>
+      <%= f.error_message_on :slug %>
+    <% end %>
+
+    <%= f.field_container :published_at do %>
+      <%= f.label :published_at %> <span class="required">*</span><br />
+      <%= f.datetime_select :published_at, :class => 'fullwidth title' %>
+      <%= f.error_message_on :published_at %>
+    <% end %>
+
+    <ul id="post_options">
+      <li>
+        <%= f.check_box :visible %>
+        <%= f.label :visible %>
+      </li>
+    </ul>
+
+  </div>
+  <div class="right">
+
+    <%= f.field_container :lead do %>
+      <%= f.label :lead %><br />
+      <%= f.text_area :lead, {:class => 'fullwidth'} %>
+      <%= f.error_message_on :lead %>
+    <% end %>
+
+  </div>
+</div>
+<div>
+
+  <%= f.field_container :body do %>
+    <%= f.label :body %><br />
+    <%= f.text_area :body, {:class => 'fullwidth'} %>
+    <%= f.error_message_on :body %>
+  <% end %>
+
+</div>

@@ -1,0 +1,7 @@
+<h1><%= t("ghetto_posts.editing_post") %></h1>
+<%= render "spree/shared/error_messages", :target => @post %>
+
+<%= form_for [:admin, @post] do |f| %>
+  <%= render :partial => 'form', :locals => { :f => f } %>
+  <%= render :partial => 'spree/admin/shared/new_resource_links' %>
+<% end %>
