@@ -1,5 +1,7 @@
 class Spree::PostsController < Spree::BaseController
 
+  helper "spree/products"
+
   def index
     @posts = Spree::Post.published
   end
