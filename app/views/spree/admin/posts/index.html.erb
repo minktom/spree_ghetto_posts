@@ -13,6 +13,7 @@
   <tr>
     <th><%= Spree::Post.human_attribute_name(:title) %></th>
     <th><%= Spree::Post.human_attribute_name(:visible) %></th>
+    <th><%= Spree::Post.human_attribute_name(:locale) %></th>
     <th><%= Spree::Post.human_attribute_name(:published_at) %></th>
     <th><%= t("action") %></th>
   </tr>
@@ -24,6 +25,9 @@
       </td>
       <td>
         <%= icon('tick') if post.visible %>
+      </td>
+      <td>
+        <%= post.locale %>
       </td>
       <td>
         <%= post.published_at %>

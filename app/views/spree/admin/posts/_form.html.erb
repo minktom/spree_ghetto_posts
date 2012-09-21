@@ -6,6 +6,14 @@
       <%= f.error_message_on :title %>
     <% end %>
 
+    <%= f.field_container :lead do %>
+      <%= f.label :lead %> <span class="required">*</span><br />
+      <%= f.text_area :lead, {:class => 'fullwidth'} %>
+      <%= f.error_message_on :lead %>
+    <% end %>
+
+  </div>
+  <div class="right">
     <%= f.field_container :slug do %>
       <%= f.label :slug %> <span class="required">*</span><br />
       <%= f.text_field :slug, :class => 'fullwidth title' %>
@@ -29,9 +37,12 @@
       <%= f.text_field :meta_description, :class => 'fullwidth title' %>
       <%= f.error_message_on :meta_description %>
     <% end %>
-
-  </div>
-  <div class="right">
+    
+    <%= f.field_container :locale do %>
+      <%= f.label :locale %> <span class="required">*</span><br />
+      <%= f.select :locale, I18n.available_locales, :class => 'fullwidth' %>
+      <%= f.error_message_on :locale %>
+    <% end %>
 
     <%= f.field_container :published_at do %>
       <%= f.label :published_at %> <span class="required">*</span><br />
@@ -42,12 +53,6 @@
     <%= f.field_container :visible do %>
       <%= f.check_box :visible %>
       <%= f.label :visible %>
-    <% end %>
-
-    <%= f.field_container :lead do %>
-      <%= f.label :lead %> <span class="required">*</span><br />
-      <%= f.text_area :lead, {:class => 'fullwidth'} %>
-      <%= f.error_message_on :lead %>
     <% end %>
 
   </div>
